@@ -22,7 +22,7 @@ for name in names:
         
         table = soup.findAll("table",{"","pokemon_acquire_moves_level_up"})[0].find("tbody")
         skills = table.findAll("td", {"colspan":"7"})
-        csvFile = open("pokemonSkill.csv", 'w', newline = '', encoding = 'utf-8')
+        csvFile = open("pokemonSkill.csv", 'a', newline = '', encoding = 'utf-8')
         writer = csv.writer(csvFile)
         
         for i in range(len(skills)):
